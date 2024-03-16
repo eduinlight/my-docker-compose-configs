@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  runner:
+    image: gitlab/gitlab-runner:latest 
+    container_name: holaplace-gitlab-runner
+    restart: always
+    volumes:
+      - /srv/gitlab-runner/config:/etc/gitlab-runner
+      - /var/run/docker.sock:/var/run/docker.sock

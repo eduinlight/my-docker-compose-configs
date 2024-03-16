@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+  squid:
+    image: "stable-diffusion"
+    container_name: "stable-diffusion"
+    restart: always
+    build:
+      context: .
+    ports:
+      - 9999:9999
